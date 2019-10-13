@@ -8,7 +8,13 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-header>Squats</ion-header>
+    <p>Set # {{this.squat_set}}</p>
+    <p>Time Elapsed: {{ this.squat_time }}</p>
+    <p>Average Time per Set: {{this.avg_squat_time}}</p>
+    <ion-button [disabled]= "squat_timer_disabled" (click) = squatTimer()>Start Set {{this.squat_set + 1}}</ion-button>
+    <ion-button [disabled]= "squat_end_disabled" (click) = endSquatTimer()>End Set {{this.squat_set}} </ion-button>
+    <ion-button (click) = clearSquatTimer()> Clear </ion-button>
   </div>
+  
 </ion-content>
