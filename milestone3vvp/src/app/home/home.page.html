@@ -1,20 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Workout Tracker 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
   <div class="ion-padding">
-    <ion-header>Squats</ion-header>
+    <ion-header>Squat</ion-header>
     <p>Set # {{this.squat_set}}</p>
     <p>Time Elapsed: {{ this.squat_time }}</p>
     <p>Average Time per Set: {{this.avg_squat_time}}</p>
     <ion-button [disabled]= "squat_timer_disabled" (click) = squatTimer()>Start Set {{this.squat_set + 1}}</ion-button>
     <ion-button [disabled]= "squat_end_disabled" (click) = endSquatTimer()>End Set {{this.squat_set}} </ion-button>
     <ion-button (click) = clearSquatTimer()> Clear </ion-button>
+    <p></p>
+    <ion-header>Bench</ion-header>
+    <p>Set # {{this.bench_set}}</p>
+    <p>Time Elapsed: {{ this.bench_time }}</p>
+    <p>Average Time per Set: {{this.avg_bench_time}}</p>
+    <ion-button [disabled]= "bench_timer_disabled" (click) = benchTimer()>Start Set {{this.bench_set + 1}}</ion-button>
+    <ion-button [disabled]= "bench_end_disabled" (click) = endBenchTimer()>End Set {{this.bench_set}} </ion-button>
+    <ion-button (click) = clearBenchTimer()> Clear </ion-button>
+    <p></p>
+    <ion-header>Deadlift</ion-header>
+    <p>Set # {{this.dl_set}}</p>
+    <p>Time Elapsed: {{ this.dl_time }}</p>
+    <p>Average Time per Set: {{this.avg_dl_time}}</p>
+    <ion-button [disabled]= "dl_timer_disabled" (click) = DLTimer()>Start Set {{this.dl_set + 1}}</ion-button>
+    <ion-button [disabled]= "dl_end_disabled" (click) = endDLTimer()>End Set {{this.dl_set}} </ion-button>
+    <ion-button (click) = clearDLTimer()> Clear </ion-button>
   </div>
   
 </ion-content>
